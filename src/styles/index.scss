@@ -2,6 +2,9 @@
 
 @import "reboot";
 
+@import "mixin";
+
+@import "../components//Button/style";
 
 .primary {
   background-color: $primary;

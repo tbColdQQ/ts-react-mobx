@@ -1,25 +1,19 @@
-import React from 'react'
+import { observer } from 'mobx-react-lite'
+import { FC } from 'react'
+import CounterStore from '../../store/Counter'
 
-class CounterStore {
-  count = 0
-  increment () {
-    this.count += 1
-  }
-  reset () {
-    this.count = 0
-  }
+interface Props {
+  counter: CounterStore
 }
 
-let counter = new CounterStore()
-
-function Counter () {
+const Counter: FC<Props> = ({counter}) => {
   return (
     <div>
-      <p>{}</p>
-      <button>+1</button>
-      <button>reset</button>
+      <p>{counter.count}</p>
+      <button onClick={() => counter.increment()}>+1</button>
+      <button onClick={() => counter.reset()}>reset</button>
     </div>
   )
 }
 
-export default Counter
+export default observer(Counter)
