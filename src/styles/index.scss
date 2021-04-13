@@ -1,11 +1,20 @@
-@import "variables";
+@import 'variables';
 
-@import "reboot";
+@import 'reboot';
 
-@import "mixin";
+@import 'mixin';
 
-@import "../components//Button/style";
+@import '../components//Button/style';
+
+// @import '../routes/routes';
 
 .primary {
-  background-color: $primary;
+	background-color: $primary;
+}
+.container {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
 }

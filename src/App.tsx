@@ -1,22 +1,13 @@
-// import Button, { ButtonSize, ButtonType } from './components/Button'
-import Counter from './components/counter/counter'
-import CounterStore from './store/Counter'
-import { Button } from 'antd-mobile'
-// import './App.scss'
+// import { Button } from 'antd-mobile'
+// import HomePage from './pages/mobile/Home/Home'
+// import TestStore from './store/mobile/Test'
 
-const counter: CounterStore = new CounterStore()
+// const tester: TestStore = new TestStore()
+
+import AnimatedSwitch from './routes'
 
 function App() {
-
-  return (
-    <div className="App">
-      app works1111
-      <Counter counter={counter}/>
-      {/* <Button btnType={ButtonType.Primary} size={ButtonSize.Large} disabled> Hello </Button>
-      <Button btnType={ButtonType.Link} href='https://www.baidu.com' size={ButtonSize.Large}> Hello </Button> */}
-      <Button style={{width: '30%', margin: '0 auto', marginTop: 20}} type="primary">antd mobile</Button>
-    </div>
-  );
+	return <AnimatedSwitch />
 }
 
-export default App;
+export default App
